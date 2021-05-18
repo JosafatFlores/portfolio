@@ -5,6 +5,7 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import AliceCarousel from 'react-alice-carousel';
+import { Link, BrowserRouter } from 'react-router-dom'
 import "react-alice-carousel/lib/alice-carousel.css";
 import './index.scss'
 import { db } from "../../firebaseConfig";
@@ -57,10 +58,11 @@ const Projects = () => {
     }, [open]);
 
     return (
+        
         <>
             <div className="container">
                 {
-                    projectsArray.map((project, index) => {
+                    projectsArray.map((project) => {
                         return <div className="container__div">
                             <img
                                 src={project.icon}
@@ -69,10 +71,8 @@ const Projects = () => {
                                 onClick={handleClickOpen('paper', project)}
                             />
                             <h1 className="container__div-h1" key={project.id}>{project.name}</h1>
-
                         </div>
                     })
-
                 }
                 <Dialog
                     open={open}
@@ -90,13 +90,27 @@ const Projects = () => {
                         >
                             <div className="dialog-container">
                                 <p>{project.description}</p>
-                                <div className="dialog-container__images">
-                                    <AliceCarousel autoPlay autoPlayInterval="3000" infinite="true">
-                                        {project.images.map(image => (
-                                            <img src={image} className="sliderimg" alt="" />
-                                        ))}
-                                    </AliceCarousel>
+                                <div className="dialog-container__info">
+                                    <b>Plataforma: {project.platform}</b>
+                                    <b>Lenguaje: {project.lenguage}</b>
                                 </div>
+                                {
+                                    project.images.length > 0
+                                        ? <div className="dialog-container__images">
+                                            <AliceCarousel autoPlay autoPlayInterval="3000" infinite="true">
+                                                {project.images.map(image => (
+                                                    <img src={image} className="sliderimg" alt="" />
+                                                ))}
+                                            </AliceCarousel>
+                                        </div>
+                                        : <h5>Aun no se han cargado imagenes :c</h5>
+                                }
+                                {
+                                    
+                                    project.gitURL
+                                        ? <LinkComponent url={project.gitURL} /> 
+                                        : null
+                                }
                             </div>
                         </DialogContentText>
                     </DialogContent>
@@ -106,5 +120,17 @@ const Projects = () => {
     )
 }
 
-export default Projects;
 
+
+const LinkComponent = ({ url }) => {
+    console.log(url)
+    return (
+        <>
+            <BrowserRouter>
+                <Link to={{ pathname: url}} target='_blank'>GitLab</Link>
+            </BrowserRouter>
+        </>
+    )
+}
+
+export default Projects;

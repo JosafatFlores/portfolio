@@ -1,18 +1,25 @@
 @import '../../Consts/variables.scss';
 
+body{
+    background: $primary-variant;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
 .container{
-   background: $primary-variant;
+   
    padding: 50px;
-   align-items: center;
-   display: flex;
+   display: inline-flexbox;
    justify-content: space-between;
-   height: 100vh;
+
 
    .container__div{
         display: inline-block;
         background: $primary;
         margin: 10px;
-        min-width: 28%;
+        min-width: 30%;
         max-height: 300px;
         vertical-align: top;
         border-radius: 10px;
@@ -42,6 +49,15 @@
 .dialog-container{
     display: block;
 
+    p{
+        text-align: justify;
+    }
+    .dialog-container__info{
+        display: flex;
+        flex-direction:  row;
+        justify-content: space-between;
+    }
+
     .dialog-container__images{
         margin: auto;
         align-items: center;
@@ -52,9 +68,10 @@
             object-fit: contain;
             margin: auto;
             border-radius: 5px;
-            box-shadow: 5px 5px 5px 1px gray;
         }
     }
+
+    
 }
 
 .alice-carousel ul li img{
@@ -69,14 +86,13 @@
 
 @media screen and (max-width: 1200px) {
     .container{
-        display: inline-block;
-        width: 100%;
-        padding: 3%;
+        display: inline-block;  
+        padding: 4%;
         .container__div{
             display: inline-block;
             margin: 0;
             margin: 5px;
-            min-width: 45%;
+            min-width: 46%;
 
         }
     }
@@ -103,7 +119,8 @@
         .container__div{
             display: block;
             margin: 5px;
-            max-width: 100%;
+            margin-top: 10px;
+            max-width: 98%;
         }
     }
 
@@ -117,9 +134,6 @@
                 object-fit: contain;
                 margin: auto;
             }
-
-            
-            
         }
     }
 }
