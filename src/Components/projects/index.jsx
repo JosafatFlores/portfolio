@@ -29,7 +29,6 @@ const Projects = () => {
                         return <div className="container__div">
                                     <img src={project.icon} alt="" className="container__div-img"/>
                                     <h1 className="container__div-h1" key={project.id}>{project.name}</h1>
-                                    <p className="container__div-p">{project.description}</p>
                                 </div>
 
                     })

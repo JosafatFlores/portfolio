@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
-
 import Projects from './Components/projects'
 
 ReactDOM.render(
