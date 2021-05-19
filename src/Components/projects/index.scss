@@ -81,6 +81,7 @@ body{
     align-items: center;
     display: block;
     margin: auto;
+    max-height: 250px;
 }
 
 
@@ -104,6 +105,7 @@ body{
     
         img{
             max-width: 40%;
+            
             display: block;
             margin: 5px;
             object-fit: contain;
