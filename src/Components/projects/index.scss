@@ -10,24 +10,22 @@ body{
 
 .container{
    
-   padding: 50px;
-   display: inline-flexbox;
+   padding: 0;
+   display: inline-block;
    justify-content: space-between;
-
+    width: 100%;
 
    .container__div{
-        display: inline-block;
+        display: block;
         background: $primary;
         margin: 10px;
-        min-width: 30%;
-        max-height: 200px;
-        vertical-align: top;
+        height: 220px;
         border-radius: 10px;
         padding: 5px;
         box-shadow: 5px 5px 5px 1px gray;
 
         img{
-            max-width: 100%;
+            max-width: 80%;
             height: 150px;    
             align-items: center;
             display: block;
@@ -86,60 +84,38 @@ body{
 
 
 
-@media screen and (max-width: 1200px) {
+
+
+@media (min-width: 768px) {
     .container{
-        display: inline-block;  
-        padding: 4%;
+        padding-top: 50px;
+        display: inline-block;
+        text-align: center;
         .container__div{
+            width: 180px;
+            height: 220px;
+            vertical-align: top;
             display: inline-block;
-            margin: 0;
-            margin: 5px;
-            min-width: 46%;
-
         }
     }
 
-    .images-container{
-        width: 100%;
-        display: inline-block;
-    
-        img{
-            max-width: 40%;
-            
-            display: block;
-            margin: 5px;
-            object-fit: contain;
-            box-shadow: 2px 2px 2px 0.5px gray;
+  }
+  
+  /* escritorio normales */
+  @media (min-width: 992px) {
+    .container{
+       
+        .container__div{
         }
     }
-}
-
-@media screen and (max-width: 700px) {
+  }
+  
+  /* pantallas grandes */
+  @media (min-width: 1200px) {
     .container{
         display: inline-block;
-        width: 100%;
-        padding: 0;
         .container__div{
-            display: block;
-            margin: 5px;
-            margin-top: 10px;
-            max-width: 98%;
+            width: 180px;
         }
     }
-
-    .dialog-container{
-        
-        .dialog-container__images{
-
-            
-            .sliderimg{
-                width: 100%;
-                object-fit: contain;
-                margin: auto;
-            }
-        }
-    }
-}
-
-
-
+  }

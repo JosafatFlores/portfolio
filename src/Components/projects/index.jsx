@@ -8,7 +8,7 @@ import AliceCarousel from 'react-alice-carousel';
 import { Link, BrowserRouter } from 'react-router-dom'
 import "react-alice-carousel/lib/alice-carousel.css";
 import './index.scss'
-import { db } from "../../firebaseConfig";
+import { db } from "../../Services/Firebase/firebaseConfig";
 
 const Projects = () => {
 
@@ -58,7 +58,7 @@ const Projects = () => {
     }, [open]);
 
     return (
-        
+
         <>
             <div className="container">
                 {
@@ -106,9 +106,9 @@ const Projects = () => {
                                         : <h5>Aun no se han cargado imagenes :c</h5>
                                 }
                                 {
-                                    
+
                                     project.gitURL
-                                        ? <LinkComponent url={project.gitURL} /> 
+                                        ? <LinkComponent url={project.gitURL} />
                                         : null
                                 }
                             </div>
@@ -120,14 +120,11 @@ const Projects = () => {
     )
 }
 
-
-
 const LinkComponent = ({ url }) => {
-    console.log(url)
     return (
         <>
             <BrowserRouter>
-                <Link to={{ pathname: url}} target='_blank'>GitLab</Link>
+                <Link to={{ pathname: url }} target='_blank'>GitLab</Link>
             </BrowserRouter>
         </>
     )
