@@ -1,4 +1,4 @@
-@import '../../Consts/variables.scss';
+@import '../../../Consts/variables.scss';
 
 *{
     margin: 0;
@@ -8,7 +8,6 @@
 .main{
     display: block;
     text-align: center;
-
     img {
         padding-top: 5px;
         margin: auto;
@@ -20,14 +19,35 @@
 
     .main__div {
         color: $white;
-        font-size: 45px;
+        font-size: 40px;
         text-align: center;
-
-        
+        padding: 10px;
+        white-space: nowrap;
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1024px){
+    .main{
+        display: flex;
+        flex-direction: row;
+        padding: 10%;
+        padding-top: 0;
+
+        img {
+            width: 30%;
+            margin: 10px;
+        }
+
+        .main__div {
+            margin: auto;
+            vertical-align: middle;
+            font-size: 50px;
+            position: relative;
+        }
+    }
+}
+
+@media (min-width: 1024px){
     .main{
         display: flex;
         flex-direction: row;
@@ -36,6 +56,7 @@
 
         img {
             width: 35%;
+            margin: 15px;
         }
 
         .main__div {

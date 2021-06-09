@@ -1,0 +1,90 @@
+@import '../../../Consts/variables.scss';
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.main-personal{
+    margin-top: 10px;
+    display: block;
+    color: $primary-variant;
+
+    .main__info{
+        display: block;
+        padding: 20px;
+        color: $primary-variant;
+
+        h2 {
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        p {
+            text-align: justify;
+            text-justify: inter-word;
+            font-weight: bold;
+            font-size: 15px;
+        }
+    }
+
+    .iam{
+        background-color: $accent;
+    }
+
+    .carrer{
+        background-color: $accent-yellow;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+    .main-personal{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin-top: 30px;
+        padding: 0;
+        .main__info{
+            width: 50%;
+            padding: 30px;
+            h2 {
+                margin-bottom: 8px;
+                font-size: 30px;
+            }
+    
+            p {
+                text-align: justify;
+                text-justify: inter-word;
+                font-weight: bold;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+
+@media (min-width: 1024px){
+    .main-personal{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin-top: 30px;
+        padding: 0;
+        .main__info{
+            width: 50%;
+            padding: 40px;
+
+            h2 {
+                margin-bottom: 20px;
+                font-size: 45px;
+            }
+    
+            p {
+                text-align: justify;
+                text-justify: inter-word;
+                font-weight: bold;
+                font-size: 25px;
+            }
+        }
+    }
+}
