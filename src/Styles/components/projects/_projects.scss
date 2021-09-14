@@ -1,6 +1,4 @@
-@import '../../Consts/variables.scss';
-
-body{
+body {
     background: $primary-variant;
     margin: 0;
     padding: 0;
@@ -8,14 +6,13 @@ body{
     height: 100%;
 }
 
-.container{
-   
-   padding: 0;
-   display: inline-block;
-   justify-content: space-between;
+.container {
+    padding: 0;
+    display: inline-block;
+    justify-content: space-between;
     width: 100%;
 
-   .container__div{
+    .container__div {
         display: block;
         background: $primary;
         margin: 10px;
@@ -24,9 +21,9 @@ body{
         padding: 5px;
         box-shadow: 5px 5px 5px 1px gray;
 
-        img{
+        img {
             max-width: 80%;
-            height: 150px;    
+            height: 150px;
             align-items: center;
             display: block;
             margin: auto;
@@ -35,45 +32,41 @@ body{
             object-fit: contain;
         }
 
-        h1{
+        h1 {
             text-align: center;
             font-size: 20px;
             color: #fff;
         }
-
-        
     }
 }
 
-.dialog-container{
+.dialog-container {
     display: block;
 
-    p{
+    p {
         text-align: justify;
     }
-    .dialog-container__info{
+    .dialog-container__info {
         display: flex;
-        flex-direction:  row;
+        flex-direction: row;
         justify-content: space-between;
     }
 
-    .dialog-container__images{
+    .dialog-container__images {
         margin: auto;
         align-items: center;
         width: 100%;
 
-        .sliderimg{
+        .sliderimg {
             width: 50%;
             object-fit: contain;
             margin: auto;
             border-radius: 5px;
         }
     }
-
-    
 }
 
-.alice-carousel ul li img{
+.alice-carousel ul li img {
     width: 100%;
     object-fit: cover;
     align-items: center;
@@ -83,16 +76,15 @@ body{
 }
 
 @media (min-width: 768px) {
-    .container{
+    .container {
         padding-top: 50px;
         display: inline-block;
         text-align: center;
-        .container__div{
+        .container__div {
             width: 180px;
             height: 220px;
             vertical-align: top;
             display: inline-block;
         }
     }
-
-  }
+}

@@ -1,17 +1,13 @@
-@import '../../../Consts/variables.scss';
-
-*{
-    margin: 0;
-    padding: 0;
-}
-
 .main{
     display: block;
     text-align: center;
+    height: 50vh;
+
     img {
-        padding-top: 5px;
+        padding-top: 25px;
         margin: auto;
         width: 50%;
+        height: 52vw;
         border-radius: 50%;
         object-fit: cover;
         margin: 20px
@@ -30,11 +26,13 @@
     .main{
         display: flex;
         flex-direction: row;
+        height: 15vh;
         padding: 10%;
-        padding-top: 0;
+        padding-top: 10vh;
 
         img {
             width: 30%;
+            height: 25vw;
             margin: 10px;
         }
 
@@ -51,11 +49,13 @@
     .main{
         display: flex;
         flex-direction: row;
+        height: 55vh;
         padding: 10%;
-        padding-top: 0;
+        padding-top: 20vh;
 
         img {
             width: 35%;
+            height: 27vw;
             margin: 15px;
         }
 

@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { db } from "../../../Services/Firebase/firebaseConfig";
-import './index.scss'
+import { db } from "../../Services/Firebase/firebaseConfig";
 
-const PersonalInfo = () => {
-
+export const PersonalInfo = () => {
     const [iAm, setIAm] = useState("")
     const [carrer, setCarrer] = useState("")
 
@@ -40,5 +38,3 @@ const PersonalInfo = () => {
         </>
     )
 }
-
-export default PersonalInfo

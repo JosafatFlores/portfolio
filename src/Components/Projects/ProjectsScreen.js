@@ -7,10 +7,9 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import AliceCarousel from 'react-alice-carousel';
 import { Link, BrowserRouter } from 'react-router-dom'
 import "react-alice-carousel/lib/alice-carousel.css";
-import './index.scss'
 import { db } from "../../Services/Firebase/firebaseConfig";
 
-const Projects = () => {
+export const ProjectsScreen = () => {
 
     const [projectsArray, setProjects] = useState([])
     const [open, setOpen] = React.useState(false);
@@ -129,5 +128,3 @@ const LinkComponent = ({ url }) => {
         </>
     )
 }
-
-export default Projects;

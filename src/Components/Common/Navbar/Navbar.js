@@ -1,8 +1,8 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
-import './index.scss'
+import { Link } from 'react-router-dom'
 import logo from '../../../Assets/logo.png'
-const Navbar = () => {
+
+export const Navbar = () => {
     return (
         <>
             <header>
@@ -11,10 +11,9 @@ const Navbar = () => {
                         <li className="nav__li"><img className="nav__logo" src={logo} alt="" /></li>
                         <li className="nav__li"><i className="fas fa-home"></i><Link to="/">Inicio</Link></li>
                         <li className="nav__li"><i className="fas fa-code"></i><Link to="/projects">Proyectos</Link></li>
-                       
                     </ul>
                     <ul className="nav__responsive-ul">
-                        <div className="nav__responsive-button-contaner">
+                        <div className="nav__responsive-button-container">
                             <div className="nav__responsive-button fas fa-bars">
 
                             </div>
@@ -30,5 +29,3 @@ const Navbar = () => {
         </>
     )
 }
-
-export default Navbar

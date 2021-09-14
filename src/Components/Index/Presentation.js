@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { db } from "../../../Services/Firebase/firebaseConfig";
+import { db } from "../../Services/Firebase/firebaseConfig";
 import ReactTextTransition, { presets } from "react-text-transition";
-import './index.scss'
+
 
 const Presentation = () => {
 
