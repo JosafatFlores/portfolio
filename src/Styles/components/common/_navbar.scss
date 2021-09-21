@@ -5,6 +5,7 @@
     background: $accent-variant;
     width: 100vw;
     position: fixed;
+    z-index: 999;
 
     .nav__li {
         display: inline-block;

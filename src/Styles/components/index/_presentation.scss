@@ -1,16 +1,17 @@
-.main{
-    display: block;
+.main {
     text-align: center;
-    height: 70vh;
 
-    img {
-        padding-top: 25px;
-        margin: auto;
-        width: 50%;
-        height: 52vw;
+    .main__circle {
+        margin-top: 80px;
         border-radius: 50%;
-        object-fit: cover;
-        margin: 20px
+        display: inline-block;
+        width: 50%;
+
+        img {
+            width: 100%;
+            border-radius: 50%;
+            display: block;
+        }
     }
 
     .main__div {
@@ -22,18 +23,15 @@
     }
 }
 
-@media (min-width: 768px) and (max-width: 1024px){
-    .main{
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .main {
         display: flex;
         flex-direction: row;
-        height: 15vh;
         padding: 10%;
-        padding-top: 10vh;
 
-        img {
+        .main__circle {
             width: 30%;
-            height: 25vw;
-            margin: 10px;
         }
 
         .main__div {
@@ -45,18 +43,16 @@
     }
 }
 
-@media (min-width: 1024px){
-    .main{
+@media (min-width: 1024px) {
+    .main {
         display: flex;
         flex-direction: row;
-        height: 55vh;
         padding: 10%;
         padding-top: 20vh;
+        min-height: 100vh ;
 
-        img {
+        .main__circle {
             width: 35%;
-            height: 27vw;
-            margin: 15px;
         }
 
         .main__div {

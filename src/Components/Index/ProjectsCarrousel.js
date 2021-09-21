@@ -1,25 +1,8 @@
-import React, { useEffect, useState } from "react";
-import { db } from "../../Services/Firebase/firebaseConfig";
+import React from "react";
 
 import Slider from "react-slick";
 
-export const ProjectsCarrousel = () => {
-    const [projectsArray, setProjects] = useState([])
-
-    const getProjects = () => {
-        db.collection("projects").onSnapshot((querySnashot) => {
-            const projectsArray = []
-
-            querySnashot.forEach((doc) => {
-                projectsArray.push({ ...doc.data(), id: doc.id })
-            })
-            setProjects(projectsArray)
-        })
-    }
-
-    useEffect(() => {
-        getProjects();
-    }, []);
+export const ProjectsCarrousel = ({ projects } = {}) => {
 
     const settings = {
         infinite: true,
@@ -61,22 +44,21 @@ export const ProjectsCarrousel = () => {
         ]
     };
     return (
-        <>
+        <section className="wow">
             {
-                projectsArray.length > 0
-                    ? <div className="main-slider">
-                        <h1>Projectos Realizados</h1>
-                        <Slider {...settings}>
-                            {
-                                projectsArray.map((project) => {
-                                    return <ProjectCard props={project} />
-                                })
-                            }
-                        </Slider>
-                    </div>
-                    : <div></div>
+                projects.length > 0
+                && <div className="main-slider animate__animated animate__fadeInUp">
+                    <h1>Projectos Realizados</h1>
+                    <Slider {...settings}>
+                        {
+                            projects.map((project, index) => {
+                                return <ProjectCard key={index} props={project} />
+                            })
+                        }
+                    </Slider>
+                </div>
             }
-        </>
+        </section>
     )
 }
 
@@ -89,4 +71,4 @@ const ProjectCard = (props) => {
             </div>
         </>
     )
-}   
+}
