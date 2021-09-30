@@ -1,0 +1,36 @@
+@import "./linkField";
+
+.linktree {
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+
+    .linktree__circle {
+        border-radius: 50%;
+        margin: auto;
+        margin-top: 10px;
+        width: 50%;
+
+        img {
+            width: 100%;
+            border-radius: 50%;
+            display: block;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .linktree {
+        .linktree__circle {
+            width: 35%;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .linktree {
+        .linktree__circle {
+            width: 25%;
+        }
+    }
+}

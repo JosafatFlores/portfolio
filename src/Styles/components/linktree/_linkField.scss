@@ -1,0 +1,51 @@
+.linkField__container {
+    background-color: $white;
+    border-radius: 10px;
+    display: flex;
+    height: 45px;
+    margin: auto;
+    margin-top: 15px;
+    cursor: pointer;
+    vertical-align: middle;
+    width: 80%;
+
+
+    i {
+        font-size: 2.5em;
+        width: 15%;
+        margin: auto 8px;
+    }
+
+    h1 {
+        height: 95%;
+        text-decoration: none;
+        width: 80%;
+        margin: auto 4px;
+        color: black;
+        font-size: 2em;
+        padding: 0;
+        vertical-align: middle;
+        text-align: center;
+
+        span {
+            width: 100%;
+            height: 100%;
+            display: inline;
+            padding: auto;
+            text-align: center;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .linkField__container {
+        width: 60%;
+    }
+}
+
+
+@media (min-width: 1024px)  {
+    .linkField__container {
+        width: 50%;
+    }
+}
